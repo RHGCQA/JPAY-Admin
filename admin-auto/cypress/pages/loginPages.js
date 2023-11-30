@@ -1,11 +1,15 @@
 class LoginTest {
     constructor() {
       this.url = "https://admin-stage.orientalwallet.com/login"
+      this.urlLive = "https://admin.orientalwallet.com/login"
       this.title = "LoginTest" 
     }
    
     visit() {
       cy.visit(this.url)
+    }
+    visitLive() {
+      cy.visit(this.urlLive)
     }
     getEmailAddressField() {
       return cy.get('[type="email"]')
